@@ -39,6 +39,11 @@
 //// Strings
 //formData.append(name, value);    
 var xhr = new XMLHttpRequest();
+var post = new XMLHttpRequest();
+
+post.onreadystatechange = function () {
+//    if (post.readyState === 4)
+}
 xhr.onreadystatechange = function () {
   if (xhr.readyState === 4) {
     document.getElementById('ajax').innerHTML = xhr.responseText;
