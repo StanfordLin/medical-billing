@@ -1,49 +1,11 @@
-//var form = document.getElementById('file-form');
-//var fileSelect = document.getElementById('file-select');
-//var uploadButton = document.getElementById('upload-button');
-//
-//form.onsubmit = function(event) {
-//  event.preventDefault();
-//
-//  // Update button text.
-//  uploadButton.innerHTML = 'Uploading...';
-//
-//  // The rest of the code will go here...
-//}
-//
-//// Get the selected files from the input.
-//var files = fileSelect.files;
-//
-//// Create a new FormData object.
-//var formData = new FormData();
-//
-//// Loop through each of the selected files.
-//for (var i = 0; i < files.length; i++) {
-//  var file = files[i];
-//
-//  // Check the file type.
-//  if (!file.type.match('image.*')) {
-//    continue;
-//  }
-//
-//  // Add the file to the request.
-//  formData.append('photos[]', file, file.name);
-//}
-//
-//// Files
-//formData.append(name, file, filename);
-//
-//// Blobs
-//formData.append(name, blob, filename);
-//
-//// Strings
-//formData.append(name, value);    
 var xhr = new XMLHttpRequest();
 var post = new XMLHttpRequest();
-
-post.onreadystatechange = function () {
-//    if (post.readyState === 4)
-}
+var formData = new FormData();
+//post.onreadystatechange = function () {
+//    if (post.readyState === 4) {
+//      document.getElementById()
+//    }
+//}
 xhr.onreadystatechange = function () {
   if (xhr.readyState === 4) {
     document.getElementById('ajax').innerHTML = xhr.responseText;
@@ -54,5 +16,24 @@ function getAJAXrequest() {
     xhr.send();
 }
 function postAJAXrequest() {
-    
+    // Loop through each of the selected files.
+    for (var i = 0; i < files.length; i++) {
+      var file = files[i];
+      // Check the file type.
+      if (!file.type.match('image.*')) {
+        continue;
+      }
+      // Add the file to the request.
+      formData.append('photos[]', file, file.name);
+    }
+    // opening with false makes call blocking and prevents race condition
+    post.open('POST', 'handler.php', false);
+    post.send(formData);
+}
+post.onload = function () {
+    if (post.status === 200) {
+        document.getElementById('postButton').innerHTML = 'upload';
+    } else {
+        alert('blah');
+    }
 }

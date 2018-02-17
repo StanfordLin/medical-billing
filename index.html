@@ -52,8 +52,31 @@
         <h3 class="mb-5">
           <em>A Treehacks Project</em>
         </h3>
-        <button type="button" class="btn btn-dark btn-xl mr-2" onclick="postAJAXrequest()" id="postButton">Post XML</button>
-        <button type="button" class="btn btn-dark btn-xl ml-2" onclick="getAJAXrequest()" id="getButton">Get Pricing</button>
+<!--
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="customFile">
+          <label class="custom-file-label" for="customFile">Choose file</label>
+        </div>
+-->
+        <form id="file-form" action="handler.php" method="POST" class="mb-2">
+<!--
+          <input type="file" class="custom-file-input" id="file-select" name="photos[]" multiple/>
+          <label class="custom-file-label" for="customFile">Choose file</label>
+-->       <div class="form-row justify-content-center">
+            
+          <span class='label label-info' id="upload-file-info"></span>
+
+            <button type="submit" class="btn btn-dark btn-xl mr-2" id="upload-button">Upload</button>
+            
+            <label class="btn btn-dark btn-xl ml-2 mr-2" for="my-file-selector">
+                <input id="my-file-selector" type="file" style="display:none;">
+                Get XML
+            </label>
+            
+            <button type="button" class="btn btn-dark btn-xl ml-2" onclick="getAJAXrequest()" id="getButton">Get Pricing</button>
+            
+            </div>
+        </form>
           
           <h3 class="mt-5">
             <em id = "ajax">...</em>
