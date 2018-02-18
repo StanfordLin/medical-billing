@@ -93,30 +93,61 @@
           <h3 class="mt-5">
             <em id = "ajax">...</em>
           </h3>
-     </div>
-      
-      <div class="overlay"></div>
-    </header>
-
-    <!-- About -->
-    <section class="content-section bg-light" id="about">
-      <div class="container text-center">
-        <div class="row">
-          <div class="col-lg-10 mx-auto">
-              
-            <form ref='uploadForm' 
+          
+<!--
+        <form ref='uploadForm' encType="multipart/form-data" class="" action="/upload" method="post">
+          <input type="text" name="fileName" value=""><br>
+          <input type="file" name="foo" value=""><br>
+          <input type="submit" name="" value="upload!">
+        </form>
+-->
+          
+          <form ref='uploadForm' 
               id='uploadForm' 
               action='http://localhost:8080/upload' 
               method='post' 
               encType="multipart/form-data">
                 <input type="file" name="sampleFile" />
                 <input type='submit' value='Upload!' />
-            </form>  
-              
-            <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
-            <p class="lead mb-5">This theme features a flexible, UX friendly sidebar menu and stock photos from our friends at
-              <a href="https://unsplash.com/">Unsplash</a>!</p>
-            <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What We Offer</a>
+          </form>    
+          
+     </div>
+      
+      <div class="overlay"></div>
+    </header>
+        
+     <!-- About -->
+    <section class="content-section bg-light" id="about">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h2>Administration costs in healthcare are outrageous</h2>
+            <p class="lead mb-5">In the U.S., more than 300 billion dollars are being spent on administrative costs alone. When you visit the doctor, you're also charged for the personnel needed to process billing and insurance-related activities like chasing after unpaid medical bills, negotiation of treatment costs, processing insurance claims and making sure the insurance on file is up-to-date.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+        
+    <!-- Why we built this -->
+    <section class="content-section bg-light" id="about">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h2>Why we built Fair Price</h2>
+            <div class="row">
+              <div class="col-xs-6 col-md-4">
+                  <img src="https://png.icons8.com/office/80/000000/lightning-bolt.png" class="img-responsive center-block  mt-3 mb-2">
+                  <p>It's faster. On average, it takes 5-6 months until a medical bill is processed through the insurance provider and given to the patient. With Fair Price, patients can walk out of the hospital with their medical bills in hand.</p></div>
+                
+              <div class="col-xs-6 col-md-4">
+                  <img src="https://png.icons8.com/metro/104/000000/scales.png" class="img-responsive center-block">
+                  <p>Fair prices. Calculated from a nationwide database of medical payment data from industry data and healthcare providers, we will help you find fair prices for medical treatments.</p></div>
+                
+                
+              <div class="col-xs-6 col-md-4">
+                  <img src="https://png.icons8.com/office/80/000000/coins.png" class="img-responsive center-block mt-3 mb-2">
+                  <p>Reduce costs. By reducing the costly and labourious process of intepreting, negotiating, and determining costs, billions of dollars can be better utilised to deliver more effective treatments.</p></div>
+            </div>
           </div>
         </div>
       </div>
