@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="MetaMapApi">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../public_mm/src/javaapi/dist/MetaMapApi.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
