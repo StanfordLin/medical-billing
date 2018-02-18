@@ -4,12 +4,6 @@ html {
   height: 100%;
 }
 
-input[type="file"] {
-    color: #0c4f63 !important;
-    font-weight: bold;
-    /*color: white !important;*/
-}
-
 .niceButton {
     background-color: #0c4f63 !important;
     color: white !important;
@@ -24,6 +18,13 @@ body {
     font-family: 'Avenir';
     font-size: 20px;
     margin-top: -2%;
+}
+
+.extraStyle {
+    font-family: 'Avenir';
+    color: #0c4f63 !important;
+    background-color: #effafd;
+    border-color: #AAE4F5;
 }
 
 .btn-xl {
@@ -155,6 +156,10 @@ h6 {
 
 #moreSpaceBelow {
     margin-bottom: 1%;
+}
+
+#getButton {
+    background-color: #0c4f63;
 }
 
 .sidebar-nav {
