@@ -4,9 +4,89 @@ html {
   height: 100%;
 }
 
-body {
-  font-family: 'Source Sans Pro';
+input[type="file"] {
+    color: #0c4f63 !important;
+    font-weight: bold;
+    /*color: white !important;*/
 }
+
+.niceButton {
+    background-color: #0c4f63 !important;
+    color: white !important;
+}
+
+body {
+    font-family: 'Avenir';
+    color: #0c4f63;
+}
+
+.infotext {
+    font-family: 'Avenir';
+    font-size: 20px;
+    margin-top: -2%;
+}
+
+/******************************/
+
+$background: #e74c3c;
+$file-upload-color: #c0392b;
+$file-upload-size: 300px;
+
+.custom-file-upload-hidden {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+    left: -9999px;
+}
+.custom-file-upload {
+    display: block;
+    width: auto;
+    font-size: 16px;
+    margin-top: 30px;
+    /*border: 1px solid #ccc;*/
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+.file-upload-wrapper {
+    position: relative; 
+    margin-bottom: 5px;
+    //border: 1px solid #ccc;
+}
+.file-upload-input {
+    width: $file-upload-size;
+    color: #fff;
+    font-size: 16px;
+    padding: 11px 17px; 
+    border: none;
+    background-color: $file-upload-color; 
+    @include transition(all 0.2s ease-in); 
+    float: left; /* IE 9 Fix */
+    &:hover, &:focus { 
+        background-color: darken($file-upload-color, 5);
+        outline: none; 
+    }
+}
+.file-upload-button {
+    cursor: pointer; 
+    display: inline-block; 
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 11px 20px; 
+    border: none;
+    margin-left: -1px;  
+    background-color: darken($file-upload-color, 10); 
+    float: left; /* IE 9 Fix */
+    @include transition(all 0.2s ease-in);
+    &:hover {
+        background-color: darken($file-upload-color, 20);
+    }
+}
+
+/******************************/
 
 .btn-xl {
   padding: 1.25rem 2.5rem;
@@ -32,7 +112,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
+    font-weight: 700;
+    color: #0c4f63;
 }
 
 .text-faded {
@@ -87,7 +168,7 @@ h6 {
   height: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background-color:#ff9a9a;
+  background-color: #AAE4F5;/*#ff9a9a;*/
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
