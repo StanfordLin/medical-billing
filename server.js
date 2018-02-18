@@ -30,7 +30,7 @@ app.post('/upload', function(req, res) {
   
   var path = __dirname + '/uploads/'+req.files.sampleFile.name
   var spawn = require('child_process').spawn;
-  var child = spawn('java', [path]);
+  var child = spawn('java', ['HelloWorld.java', path]);
 
 //    res.send('File uploaded!');
 
