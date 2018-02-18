@@ -2,11 +2,11 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        
+        <script src="dropzone.js"></script>
         <script src="uploader.js"></script>
         <!-- Custom Fonts -->
         <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -58,22 +58,47 @@
           <label class="custom-file-label" for="customFile">Choose file</label>
         </div>
 -->
-        <div class="mb-4 infotext">Upload your latest continuity of care document, preferrably in XML format. We'll take it from there.</div>
+        <div class="mb-5 infotext">Upload your latest continuity of care document, preferrably in XML format. We'll take it from there.</div>
         
-          <div class="form-upload">
+          <div class="form-upload extraStyle w-50 mb-3">
               <form ref='uploadForm' 
               id='uploadForm' 
               action='http://localhost:8080/upload' 
               method='post' 
               encType="multipart/form-data">
+                  <input type="file" name="sampleFile" />
+                  <input type='submit' value='Upload' />
+<!--
+                  <div class="fallback">
+                    <input name="file" type="file" multiple />
+                  </div>
+-->
+<!--
+                  <button id="upload_button" style="text-align: left">Choose file</button>
+                  <input id="upload_input" type="file" name="file" />
+                  <input type='submit' value='Upload' />
+                  <button id="upload_button">Choose file</button>
+                  <input  id="upload_input" name="your_name" type="file"/>
+                  <input type="file" class="custom-file-input extraStyle" id="file" name="file">
+                      <label class="custom-file-label extraStyle" for="customFile">Choose file</label>
+-->
+<!--
                   <div class="custom-file w-50 mb-4 mt-4" style="text-align: left">
-                      <input type="file" class="custom-file-input extraStyle" id="file" name="file">
+                      <input type="file" class="custom-file-input extraStyle" id="customFile" lang="es" name="file">
                       <label class="custom-file-label extraStyle" for="customFile">Choose file</label>
                     </div>
+-->
               </form>  
           </div>
           
-          
+<!--
+          <script type="text/javascript">
+            $('.custom-file-input').on('change', function() { 
+                let fileName = $(this).val().split('\\').pop(); 
+                $(this).next('.custom-file-control').addClass("selected").html(fileName); 
+            });
+          </script>
+-->
           
           <div class="form-row justify-content-center">
 <!--        <button type="submit" class="btn btn-dark btn-xl mr-2" id="upload-button">Upload</button>-->
@@ -90,7 +115,8 @@
             </label>
         </form>
 -->
-        <button type="button" class="btn btn-dark btn-xl mt-2" onclick="getAJAXrequest()" id="getButton">Find Your Fair Pricing</button>           
+        <!--<button type="button" class="btn btn-dark btn-xl mt-2" onclick="getAJAXrequest()" id="getButton">Upload</button>   -->
+              <button type="button" class="btn btn-dark btn-xl mt-2" onclick="getAJAXrequest()" id="getButton">Find Your Fair Pricing</button>           
         </div>
           <h3 class="mt-5">
             <em id = "ajax"></em>

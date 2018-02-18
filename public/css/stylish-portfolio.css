@@ -25,6 +25,10 @@ body {
     color: #0c4f63 !important;
     background-color: #effafd;
     border-color: #AAE4F5;
+    padding: 3%;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: auto;
 }
 
 .btn-xl {
@@ -160,6 +164,7 @@ h6 {
 
 #getButton {
     background-color: #0c4f63;
+    border-color: #AAE4F5;
 }
 
 .sidebar-nav {
