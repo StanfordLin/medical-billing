@@ -27,11 +27,12 @@ app.post('/upload', function(req, res) {
   sampleFile.mv(__dirname + '/uploads/'+req.files.sampleFile.name, function(err) {
     if (err)
       return res.status(500).send(err);
-  
-  var path = __dirname + '/uploads/'+req.files.sampleFile.name
-  var spawn = require('child_process').spawn;
-  var child = spawn('java', ['HelloWorld.java', path]);
 
+  var path = __dirname + '/uploads/'+req.files.sampleFile.name
+  // var spawn = require('child_process').spawn;
+  // var child = spawn('java', ['HelloWorld.java']
+  const { exec } = require('child_process');
+  exec('java HelloWorld')
 //    res.send('File uploaded!');
 
   });
