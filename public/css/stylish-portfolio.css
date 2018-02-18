@@ -9,10 +9,6 @@ html {
     color: white !important;
 }
 
-#afterUpload {
-  display: none;
-}
-
 body {
     font-family: 'Avenir';
     color: #0c4f63;

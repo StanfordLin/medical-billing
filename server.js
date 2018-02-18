@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //});
 
 app.post('/upload', function(req, res) {
-  res.redirect('/index.html');
+  res.redirect('/updone.html');
   if (!req.files)
     return res.status(400).send('No files were uploaded.');
 
