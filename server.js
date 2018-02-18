@@ -27,6 +27,10 @@ app.post('/upload', function(req, res) {
   sampleFile.mv(__dirname + '/uploads/'+req.files.sampleFile.name, function(err) {
     if (err)
       return res.status(500).send(err);
+  
+  var path = __dirname + '/uploads/'+req.files.sampleFile.name
+  var spawn = require('child_process').spawn;
+  var child = spawn('java', [path]);
 
 //    res.send('File uploaded!');
 
