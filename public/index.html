@@ -60,15 +60,28 @@
 -->
         <div class="mb-5 infotext">Upload your latest continuity of care document, preferrably in XML format. We'll take it from there.</div>
         
-          <div class="form-upload extraStyle w-50 mb-3">
-              <form ref='uploadForm' 
+          <div class="form-upload extraStyle w-50 mb-3" id="afterUpload">
+          <form ref='uploadForm' 
+              id='uploadForm' 
+              action='http://localhost:8080/upload' 
+              method='post' 
+              encType="multipart/form-data">
+                <input type="file" name="sampleFile" />
+                <input type='submit' value='Upload!' onclick='changeText()'/>
+          </form>
+        <script>
+            function changeText() {
+                document.getElementById('afterUpload').innerHTML = You File Has Been Uploaded
+            }
+        </script>
+ <!--             <form ref='uploadForm' 
               id='uploadForm' 
               action='http://localhost:8080/upload' 
               method='post' 
               encType="multipart/form-data">
                   <input type="file" name="sampleFile" />
                   <input type='submit' value='Upload' />
-<!--
+
                   <div class="fallback">
                     <input name="file" type="file" multiple />
                   </div>
@@ -87,8 +100,8 @@
                       <input type="file" class="custom-file-input extraStyle" id="customFile" lang="es" name="file">
                       <label class="custom-file-label extraStyle" for="customFile">Choose file</label>
                     </div>
--->
-              </form>  
+
+              </form>  -->
           </div>
           
 <!--
@@ -130,16 +143,7 @@
         </form>
 -->
           
-<!--
-          <form ref='uploadForm' 
-              id='uploadForm' 
-              action='http://localhost:8080/upload' 
-              method='post' 
-              encType="multipart/form-data">
-                <input type="file" name="sampleFile" />
-                <input type='submit' value='Upload!' />
-          </form>    
--->
+          
           
      </div>
       

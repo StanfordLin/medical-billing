@@ -15,6 +15,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //});
 
 app.post('/upload', function(req, res) {
+  res.redirect('http://localhost:8080/index.html');
   if (!req.files)
     return res.status(400).send('No files were uploaded.');
  
@@ -27,7 +28,8 @@ app.post('/upload', function(req, res) {
     if (err)
       return res.status(500).send(err);
  
-    res.send('File uploaded!');
+//    res.send('File uploaded!');
+    
   });
 });
 //
