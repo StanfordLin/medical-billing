@@ -60,7 +60,7 @@
 -->
         <div class="mb-5 infotext">Upload your latest continuity of care document, preferrably in XML format. We'll take it from there.</div>
 
-          <div class="form-upload extraStyle w-50 mb-3" id="afterUpload">
+          <div class="form-upload extraStyle w-50 mb-3">
           <form ref='uploadForm'
               id='uploadForm'
               action='/upload'
@@ -69,11 +69,12 @@
                 <input type="file" name="sampleFile" />
                 <input type='submit' value='Upload!' onclick='changeText()'/>
           </form>
+          <p id="afterUpload">Your file has been uploaded!</p>
         <script>
-            function changeText() {
-
-                // document.getElementById('afterUpload').innerHTML = "You File Has Been Uploaded"
-            }
+          function changeText() {
+            document.getElementById('afterUpload').style.display = "inline-block";
+            document.getElementById('uploadForm').style.display = "none";
+          }
         </script>
  <!--             <form ref='uploadForm'
               id='uploadForm'
