@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="dropzone.js"></script>
+        <script src="uploader.js"></script>
+        <!-- Custom Fonts -->
+        <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+        <link href="/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="/css/stylish-portfolio.css" rel="stylesheet">
+    </head>
+
+    <body id="page-top">
+    <!-- Navigation -->
+    <!--<a class="menu-toggle rounded" href="#">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a class="js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#page-top">Home</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#about">About</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#services">Services</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>-->
+
+    <!-- Header -->
+    <header class="masthead d-flex">
+      <div class="container text-center my-auto">
+        <h1 class="mb-1" style="margin-top: -5%">Fair Price</h1>
+        <h3 class="mb-5">
+          <em>Saving time. Saving lives.</em>
+        </h3>
+<!--
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="customFile">
+          <label class="custom-file-label" for="customFile">Choose file</label>
+        </div>
+-->
+        <div class="mb-5 infotext">Upload your latest continuity of care document, preferrably in XML format. We'll take it from there.</div>
+
+          <div class="form-upload extraStyle w-50 mb-3" id="afterUpload">
+          <form ref='uploadForm'
+              id='uploadForm'
+              action='/upload'
+              method='post'
+              encType="multipart/form-data">
+                <input type="file" name="sampleFile" />
+                <input type='submit' value='Upload!' onclick='changeText()'/>
+          </form>
+        <script>
+            function changeText() {
+
+                // document.getElementById('afterUpload').innerHTML = "You File Has Been Uploaded"
+            }
+        </script>
+ <!--             <form ref='uploadForm'
+              id='uploadForm'
+              action='http://localhost:8080/upload'
+              method='post'
+              encType="multipart/form-data">
+                  <input type="file" name="sampleFile" />
+                  <input type='submit' value='Upload' />
+
+                  <div class="fallback">
+                    <input name="file" type="file" multiple />
+                  </div>
+-->
+<!--
+                  <button id="upload_button" style="text-align: left">Choose file</button>
+                  <input id="upload_input" type="file" name="file" />
+                  <input type='submit' value='Upload' />
+                  <button id="upload_button">Choose file</button>
+                  <input  id="upload_input" name="your_name" type="file"/>
+                  <input type="file" class="custom-file-input extraStyle" id="file" name="file">
+                      <label class="custom-file-label extraStyle" for="customFile">Choose file</label>
+-->
+<!--
+                  <div class="custom-file w-50 mb-4 mt-4" style="text-align: left">
+                      <input type="file" class="custom-file-input extraStyle" id="customFile" lang="es" name="file">
+                      <label class="custom-file-label extraStyle" for="customFile">Choose file</label>
+                    </div>
+
+              </form>  -->
+          </div>
+
+<!--
+          <script type="text/javascript">
+            $('.custom-file-input').on('change', function() {
+                let fileName = $(this).val().split('\\').pop();
+                $(this).next('.custom-file-control').addClass("selected").html(fileName);
+            });
+          </script>
+-->
+
+          <div class="form-row justify-content-center">
+<!--        <button type="submit" class="btn btn-dark btn-xl mr-2" id="upload-button">Upload</button>-->
+<!--        <form id="file-form" action="handler.php" method="POST" class="mb-2">-->
+<!--
+          <input type="file" class="custom-file-input" id="file-select" name="photos[]" multiple/>
+          <label class="custom-file-label" for="customFile">Choose file</label>
+-->
+<!--
+          <span class='label label-info' id="upload-file-info"></span>
+            <label class="btn btn-dark btn-xl ml-2 mr-2" for="my-file-selector">
+                <input id="my-file-selector" type="file" style="display:none;">
+                Get XML
+            </label>
+        </form>
+-->
+        <!--<button type="button" class="btn btn-dark btn-xl mt-2" onclick="getAJAXrequest()" id="getButton">Upload</button>   -->
+              <button type="button" class="btn btn-dark btn-xl mt-2" onclick="getAJAXrequest()" id="getButton">Find Your Fair Pricing</button>
+        </div>
+          <h3 class="mt-5">
+            <em id = "ajax"></em>
+          </h3>
+
+<!--
+        <form ref='uploadForm' encType="multipart/form-data" class="" action="/upload" method="post">
+          <input type="text" name="fileName" value=""><br>
+          <input type="file" name="foo" value=""><br>
+          <input type="submit" name="" value="upload!">
+        </form>
+-->
+
+
+
+     </div>
+
+      <div class="overlay"></div>
+    </header>
+
+     <!-- About -->
+    <section class="content-section bg-light" id="about">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h2>Administration costs in healthcare are outrageous</h2>
+            <p class="lead mb-5">In the U.S., more than 300 billion dollars are being spent on administrative costs alone. When you visit the doctor, you're also charged for the personnel needed to process billing and insurance-related activities like chasing after unpaid medical bills, negotiation of treatment costs, processing insurance claims and making sure the insurance on file is up-to-date.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why we built this -->
+    <section class="content-section bg-light" id="why">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h2 id="moreSpaceBelow">Why we built Fair Price</h2>
+            <div class="row">
+              <div class="col-xs-6 col-md-4">
+                  <img src="/images/lightning_bolt.png" class="img-responsive center-block  mt-3 mb-2">
+                  <p id="spaceMore"><span style="font-weight: bold">Faster processing</span>. On average, it takes 5-6 months for an insurance provider to process a medical bill. With Fair Price, patients can walk out of the hospital with their medical bills in hand.</p></div>
+
+              <div class="col-xs-6 col-md-4">
+                  <img src="/images/scales.png" class="img-responsive center-block">
+                  <p id="spaceMore"><span style="font-weight: bold">Fair prices</span>. Calculated from a nationwide database of medical payment data from industry data and healthcare providers, we will help you find fair prices for medical treatments.</p></div>
+
+              <div class="col-xs-6 col-md-4">
+                  <img src="/images/coins.png" class="img-responsive center-block mt-3 mb-2">
+                  <p id="spaceMore"><span style="font-weight: bold">Reduced costs</span>. By reducing the costly and labourious process of intepreting, negotiating, and determining costs, billions of dollars can be better utilized to deliver more effective treatments.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </body>
+</html>
